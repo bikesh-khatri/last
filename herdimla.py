@@ -210,11 +210,20 @@ def admin_dashboard(user_id):
     room_button.grid(row=2, column=1, padx=50, pady=20, sticky="ne")
 
     # New Edit Profile Button
-    edit_profile_button = tk.Button(button_frame, text="Edit Profile", command=lambda: [dashboard.destroy(), edit_user_profile(user_id)], bg="#4CAF50", fg="white", font=("Arial", 14), width=button_width, height=button_height)
+    edit_profile_button = tk.Button(button_frame, text="Edit Profile", command=lambda: [dashboard.destroy(), 
+                                                                                        edit_user_profile
+                                                                                        (user_id)], 
+                                                                                        bg="#4CAF50", 
+                                                                                        fg="white", 
+                                                                                        font=("Arial", 14), 
+                                                                                        width=button_width, 
+                                                                                        height=button_height)
     edit_profile_button.grid(row=3, column=0, padx=50, pady=20, sticky="sw")
 
     # Logout button with messagebox
-    logout_button = tk.Button(button_frame, text="Logout", command=lambda: [messagebox.showinfo("Logout", "Logged out successfully!"), dashboard.destroy(), login_page(root)], bg="#FF0000", fg="white", font=("Arial", 14), width=button_width, height=button_height)
+    logout_button = tk.Button(button_frame, text="Logout", command=lambda: [messagebox.showinfo("Logout", 
+    "Logged out successfully!"), dashboard.destroy(), login_page(root)], bg="#FF0000", fg="white", 
+    font=("Arial", 14), width=button_width, height=button_height)
     logout_button.grid(row=3, column=1, padx=50, pady=20, sticky="se")
 
 def edit_user_profile(user_id):
